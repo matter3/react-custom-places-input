@@ -2,11 +2,13 @@
 An ES6 react component for combining custom Algolia results with Algolia Places. This component allows you to use results from an Algolia Index along with Algolia Places results.
 
 ## Installation
-```npm install react-custom-places-input --save
+```
+npm install react-custom-places-input --save
 ```
 
 ## Usage
-```import React, { Component } from 'react';
+```javascript
+import React, { Component } from 'react';
 import PlacesInput from './PlacesInput';
 import algoliasearch from 'algoliasearch';
 
@@ -41,6 +43,17 @@ class App extends Component {
 
 export default App;
 ```
+
+## Props
+* client: an instantiation of the algoliasearch client
+* index: the index you want to include in the places results
+* onSelect: the function that will be ran upon a result being selected
+* displayKey: the field in your index you want displayed in the results
+* customHeader: header text you want displayed above your list of results
+* placesHeader: header text you want displayed above the places results
+* customHitsPerPage: number of your custom hits you want shown per query
+* placesHitsPerPage: number of places hits you want shown per query
+* customClass: a class to apply to the <input> field generated
 
 ## Dependencies
 * react
