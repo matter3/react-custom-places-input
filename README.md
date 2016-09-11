@@ -7,7 +7,7 @@ npm install react-custom-places-input --save
 ```
 
 ## Usage
-```
+```javascript
 import React, { Component } from 'react';
 import PlacesInput from './PlacesInput';
 import algoliasearch from 'algoliasearch';
