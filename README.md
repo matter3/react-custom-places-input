@@ -44,6 +44,17 @@ class App extends Component {
 export default App;
 ```
 
+## Props
+* client: an instantiation of the algoliasearch client
+* index: the index you want to include in the places results
+* onSelect: the function that will be ran upon a result being selected
+* displayKey: the field in your index you want displayed in the results
+* customHeader: header text you want displayed above your list of results
+* placesHeader: header text you want displayed above the places results
+* customHitsPerPage: number of your custom hits you want shown per query
+* placesHitsPerPage: number of places hits you want shown per query
+* customClass: a class to apply to the <input> field generated
+
 ## Dependencies
 * react
 * algoliasearch
