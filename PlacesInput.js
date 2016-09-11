@@ -8,10 +8,11 @@ export default class PlacesInput extends Component {
     client : PropTypes.object.isRequired,
     index : PropTypes.string.isRequired,
     onSelect : PropTypes.func.isRequired,
+    displayKey : PropTypes.string.isRequired,
     customHeader : PropTypes.string.isRequired,
     placesHeader : PropTypes.string.isRequired,
-    customHitsPerPage : PropTypes.number,
-    placesHitsPerPage : PropTypes.number,
+    customHitsPerPage : PropTypes.number.isRequired,
+    placesHitsPerPage : PropTypes.number.isRequired,
     customClass : PropTypes.string
   }
   constructor (props) {
@@ -21,7 +22,7 @@ export default class PlacesInput extends Component {
 
     this.customDataset = {
       source : autocomplete.sources.hits(this.index, { hitsPerPage : this.props.customHitsPerPage }),
-      displayKey : 'name',
+      displayKey : this.props.displayKey,
       templates : {
         header : this.props.customHeader
       }
@@ -37,7 +38,7 @@ export default class PlacesInput extends Component {
 
   }
   componentDidMount () {
-    let autocompleteInstance = autocomplete(document.querySelector('#alg-places-input'), {
+    autocomplete(document.querySelector('#alg-places-input'), {
       cssClasses : { prefix : 'alg-places' }
     }, [
       this.placesDataset,
