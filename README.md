@@ -9,7 +9,7 @@ npm install react-custom-places-input --save
 ## Usage
 ```javascript
 import React, { Component } from 'react';
-import PlacesInput from './PlacesInput';
+import PlacesInput from 'react-custom-places-input';
 import algoliasearch from 'algoliasearch';
 
 const algoliaClient = algoliasearch(YOUR_ALGOLIA_APP, YOUR_ALGOLIA_API_KEY);

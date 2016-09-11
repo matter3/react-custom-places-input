@@ -1,6 +1,6 @@
 {
   "name": "react-custom-places-input",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A react component for combining custom Algolia results with Algolia Places",
   "main": "PlacesInput.js",
   "scripts": {
