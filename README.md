@@ -60,3 +60,6 @@ export default App;
 * algoliasearch
 * places.js
 * autocomplete.js
+
+## Limitations
+This component only supports integration of one Algolia Index with Algolia Places results. As well, only a set of specific parameters are passed to the component. In the future perhaps this could be fleshed out more to allow greater specification of parameters and allow more flexibility with the component.
