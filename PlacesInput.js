@@ -13,7 +13,8 @@ export default class PlacesInput extends Component {
     placesHeader : PropTypes.string.isRequired,
     customHitsPerPage : PropTypes.number.isRequired,
     placesHitsPerPage : PropTypes.number.isRequired,
-    customClass : PropTypes.string
+    customClass : PropTypes.string,
+    countries : PropTypes.array
   }
   constructor (props) {
     super(props);
@@ -24,7 +25,12 @@ export default class PlacesInput extends Component {
       source : autocomplete.sources.hits(this.index, { hitsPerPage : this.props.customHitsPerPage }),
       displayKey : this.props.displayKey,
       templates : {
-        header : this.props.customHeader
+        header : this.props.customHeader,
+        suggestion : function(hit) {
+          return "<div class='custom-result'><small>"+
+                  hit.name +
+                  "</small></div>"
+        }
       }
     }
 
@@ -33,6 +39,7 @@ export default class PlacesInput extends Component {
       templates : {
         header : this.props.placesHeader
       },
+      countries: this.props.countries,
       hitsPerPage : this.props.placesHitsPerPage
     });
 
@@ -52,7 +59,7 @@ export default class PlacesInput extends Component {
   render () {
     return (
       <div>
-        <input type='search' id='alg-places-input' className={this.props.customClass}/>
+        <input type='search' id='alg-places-input' className={this.props.customClass} placeholder={this.props.inputPlaceholder}/>
       </div>
     )
   }
