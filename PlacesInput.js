@@ -25,12 +25,7 @@ export default class PlacesInput extends Component {
       source : autocomplete.sources.hits(this.index, { hitsPerPage : this.props.customHitsPerPage }),
       displayKey : this.props.displayKey,
       templates : {
-        header : this.props.customHeader,
-        suggestion : function(hit) {
-          return "<div class='custom-result'><small>"+
-                  hit.name +
-                  "</small></div>"
-        }
+        header : this.props.customHeader
       }
     }
 
