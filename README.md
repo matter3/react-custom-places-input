@@ -35,6 +35,7 @@ class App extends Component {
           customHitsPerPage={5}
           placesHitsPerPage={5}
           customClass='my-custom-class'
+          countries=['us', 'ca']
           />
       </div>
     );
@@ -54,6 +55,7 @@ export default App;
 * customHitsPerPage: number of your custom hits you want shown per query
 * placesHitsPerPage: number of places hits you want shown per query
 * customClass: a class to apply to the <input> field generated
+* countries: an array with the country codes desired
 
 ## Dependencies
 * react
