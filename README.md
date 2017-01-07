@@ -1,4 +1,7 @@
+
 # react-custom-places-input
+[![npm version](https://badge.fury.io/js/react-custom-places-input.svg)](https://badge.fury.io/js/react-custom-places-input)
+
 An **ES6** react component for combining custom Algolia results with Algolia Places. This component allows you to use results from an Algolia Index along with Algolia Places results.
 
 ## Installation
